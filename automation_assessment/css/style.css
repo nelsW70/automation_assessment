@@ -1,0 +1,168 @@
+/* Your custom styles */
+body, html {
+    height: 100%;
+}
+
+body{
+  font-size:16px;
+}
+
+/* full page background image */
+
+.bg {
+  /* The image used */
+  background-image: url("../img/fotolia_104477267.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* background image mask */
+
+.rgba-black-strong {
+  background-color: rgba(0,0,0,.5);
+}
+
+/* fake navbar */
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  height: 95px;
+}
+
+/* navbar styling */
+
+.header-info {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  position: relative;
+}
+
+/* navbar text */
+
+.header-title {
+  font-family: 'Roboto Slab';
+  color: rgba(68, 104, 125, 1);
+  font-size: 1.5rem;
+}
+
+/* main content text */
+
+.content-body {
+  font-family: 'Open Sans';
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.main-content {
+  height: 100vh;
+}
+
+/* overlay on which the main content sits */
+
+.overlay-one {
+  position: absolute;
+  top: 95px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 95%;
+  width: 100%;
+  opacity: 1;
+  background-color: transparent;
+  overflow-y: scroll;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* text questions content */
+
+.text-questions-content {
+  padding-top: 15%;
+}
+
+/* button primary */
+
+.btn-primary {
+  background-color: rgb(95, 143, 191) !important;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  filter: brightness(110%);
+}
+
+/* footer */
+
+footer.page-footer {
+  margin-top: 0px !important;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+footer.page-footer .footer-copyright {
+  background-color: rgb(54, 57, 56);
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 11px;
+}
+
+
+/* a lot of media queries */
+
+/* header content */
+
+@media screen and (max-width: 920px) {
+    .navbar-brand img {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 812px) and (orientation: landscape ){
+    .navbar-brand img {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 812px) and (orientation: portrait ){
+    .logo-section {
+      padding-left: 0 !important;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait ){
+    .navbar-brand img {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 414px) and (orientation: portrait ){
+    /*.navbar-brand img {
+        height: 30px;
+    }*/
+    .header-main-text {
+      padding-left: 0 !important;
+    }
+    .header-title {
+      font-size: 1.25rem;
+    }
+    .logo-column, .logo-section {
+      padding-left: 0 !important;
+      /*padding-right: 0 !important;*/
+    }
+}
