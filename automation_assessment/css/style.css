@@ -58,9 +58,10 @@ header {
 /* main content text */
 
 .content-body {
+  color: rgba(255, 255, 255, 1);
   font-family: 'Open Sans';
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 1);
+  line-height: 1.65;
 }
 
 .main-content {
@@ -87,7 +88,7 @@ header {
 /* text questions content */
 
 .text-questions-content {
-  padding-top: 15%;
+  padding-top: 13%;
 }
 
 /* button primary */
@@ -95,6 +96,12 @@ header {
 .btn-primary {
   background-color: rgb(95, 143, 191) !important;
   border-radius: 10px;
+  font-family: 'Open Sans';
+  font-size: .9rem;
+  font-weight: 600;
+  margin-left: 0;
+  padding: .74rem 1.75rem;
+  text-transform: none;
 }
 
 .btn-primary:hover {
