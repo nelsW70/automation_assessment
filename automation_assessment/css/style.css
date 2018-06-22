@@ -35,7 +35,6 @@ body{
   background-size: cover;
 }
 
-
 /* background image masks */
 
 .rgba-black-strong {
@@ -86,6 +85,24 @@ header {
   height: 100vh;
 }
 
+/* question header text */
+
+.question-header {
+  font-family: 'Open Sans';
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* checkbox label text */
+
+.checkbox-label-text .form-check-label {
+  color: rgba(36, 39, 48, 1);
+  font-family: 'Open Sans';
+  font-size: 1.25rem;
+  line-height: 1.28rem;
+}
+
+
 /* overlay on which the main content sits */
 
 .overlay-one {
@@ -107,6 +124,10 @@ header {
 
 .text-questions-content {
   padding-top: 13%;
+}
+
+.text-questions-content-white-background {
+  padding-top: 5%;
 }
 
 /* text questions div */
