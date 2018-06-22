@@ -61,7 +61,7 @@ header {
   color: rgba(255, 255, 255, 1);
   font-family: 'Open Sans';
   font-size: 1.25rem;
-  line-height: 1.65;
+  line-height: 1.75;
 }
 
 .main-content {
@@ -85,10 +85,16 @@ header {
   padding-right: 15px;
 }
 
-/* text questions content */
+/* text questions content row */
 
 .text-questions-content {
   padding-top: 13%;
+}
+
+/* text questions div */
+
+.opening-content {
+  padding-right: 0;
 }
 
 /* button primary */
@@ -100,7 +106,7 @@ header {
   font-size: .9rem;
   font-weight: 600;
   margin-left: 0;
-  padding: .74rem 1.75rem;
+  padding: .6rem 1.25rem;
   text-transform: none;
 }
 
