@@ -22,10 +22,28 @@ body{
   background-size: cover;
 }
 
-/* background image mask */
+.bg-two {
+  /* The image used */
+  background-image: url("../img/fotolia_104477267-BW.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* background image masks */
 
 .rgba-black-strong {
   background-color: rgba(0,0,0,.5);
+}
+
+.rgba-white-strong {
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* fake navbar */
@@ -99,11 +117,15 @@ header {
 
 /* button primary */
 
+  button {
+    min-width: 178px;
+  }
+
 .btn-primary {
   background-color: rgb(95, 143, 191) !important;
   border-radius: 10px;
   font-family: 'Open Sans';
-  font-size: .9rem;
+  font-size: .95rem;
   font-weight: 600;
   margin-left: 0;
   padding: .6rem 1.25rem;
