@@ -110,6 +110,13 @@ header {
   line-height: 1.28rem;
 }
 
+/* checkbox before/after colors */
+
+[type=checkbox][class*=filled-in]:checked+label:after {
+  border-color: rgba(68, 104, 125, 1);
+  background-color: rgba(68, 104, 125, 1);
+}
+
 
 /* overlay on which the main content sits */
 
@@ -142,6 +149,25 @@ header {
 
 .opening-content {
   padding-right: 0;
+}
+
+/* pagination column */
+
+.pagination-column {
+  padding-right: 15rem;
+}
+
+.pagination-text-one {
+  font-family: 'Open Sans';
+  font-size: .75rem;
+  color: rgba(36, 39, 48, 1);
+}
+
+.pagination-text-two {
+  color: rgba(82, 144, 195, 1);
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 14px;
 }
 
 /* button primary */
@@ -201,7 +227,7 @@ footer.page-footer .footer-copyright {
     .navbar-brand img {
         height: 50px;
     }
-    .text-questions-content {
+    .text-questions-content, .text-questions-content-white-background {
     padding-top: 6rem;
     padding-bottom: 5rem;
 }
@@ -212,6 +238,13 @@ footer.page-footer .footer-copyright {
       padding-left: 0 !important;
     }
     .text-questions-content {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
+}
+
+@media screen and (max-width: 812px) {
+    .text-questions-content-white-background {
     padding-top: 6rem;
     padding-bottom: 5rem;
 }
@@ -237,7 +270,7 @@ footer.page-footer .footer-copyright {
 }
 
 @media screen and (max-width: 575px) {
-    .text-questions-content {
+    .text-questions-content, .text-questions-content-white-background {
       margin-left: 0 !important;
       padding-right: 15px;
     }
