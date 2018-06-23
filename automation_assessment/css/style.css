@@ -3,6 +3,14 @@ body, html {
     height: 100%;
 }
 
+/*html {
+  background: url("../img/fotolia_104477267.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
 body{
   font-size:16px;
 }
@@ -107,7 +115,7 @@ header {
 
 .overlay-one {
   position: absolute;
-  top: 95px;
+  /*top: 95px;*/
   bottom: 0;
   left: 0;
   right: 0;
@@ -123,11 +131,11 @@ header {
 /* text questions content row */
 
 .text-questions-content {
-  padding-top: 13%;
+  padding-top: 12rem;
 }
 
 .text-questions-content-white-background {
-  padding-top: 5%;
+  padding-top: 8rem;
 }
 
 /* text questions div */
@@ -201,16 +209,43 @@ footer.page-footer .footer-copyright {
     }
 }
 
+@media screen and (max-width: 812px) {
+    .logo-section {
+      padding-left: 0 !important;
+    }
+}
+
+
 @media screen and (max-width: 768px) and (orientation: portrait ){
     .navbar-brand img {
         height: 50px;
     }
 }
 
+@media screen and (max-width: 575px) {
+    .text-questions-content {
+      margin-left: 0 !important;
+      padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .logo-column {
+      margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 498px) {
+    .navbar-brand img {
+      height: 40px;
+    }
+    .header-title {
+      font-size: 1.25rem;
+      padding-top: .5rem !important;
+    }
+}
+
 @media screen and (max-width: 414px) and (orientation: portrait ){
-    /*.navbar-brand img {
-        height: 30px;
-    }*/
     .header-main-text {
       padding-left: 0 !important;
     }
@@ -219,6 +254,23 @@ footer.page-footer .footer-copyright {
     }
     .logo-column, .logo-section {
       padding-left: 0 !important;
-      /*padding-right: 0 !important;*/
     }
+    .opening-content {
+      padding-left: 0 !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+  .navbar-brand img {
+    height: 30px;
+  }
+  .navbar-brand {
+    margin-right: 0;
+  }
+  .logo-column {
+    padding-right: 0;
+  }
+  .header-title {
+    font-size: 1rem;
+  }
 }
