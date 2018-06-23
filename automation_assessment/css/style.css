@@ -1,4 +1,4 @@
-/* Your custom styles */
+
 body, html {
     height: 100%;
 }
@@ -201,17 +201,31 @@ footer.page-footer .footer-copyright {
     .navbar-brand img {
         height: 50px;
     }
+    .text-questions-content {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
 }
 
 @media screen and (max-width: 812px) and (orientation: portrait ){
     .logo-section {
       padding-left: 0 !important;
     }
+    .text-questions-content {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
 }
 
 @media screen and (max-width: 812px) {
     .logo-section {
       padding-left: 0 !important;
+    }
+    footer.page-footer .footer-copyright {
+      padding-left: 30px !important;
+    }
+    .copyright-div {
+      padding-left: 2px !important;
     }
 }
 
@@ -257,6 +271,9 @@ footer.page-footer .footer-copyright {
     }
     .opening-content {
       padding-left: 0 !important;
+    }
+    footer.page-footer .footer-copyright {
+      padding-left: 15px !important;
     }
 }
 
