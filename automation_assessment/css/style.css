@@ -154,7 +154,7 @@ header {
 /* pagination column */
 
 .pagination-column {
-  padding-right: 15rem;
+  padding-left: 15rem;
 }
 
 .pagination-text-one {
@@ -215,7 +215,21 @@ footer.page-footer .footer-copyright {
 
 /* a lot of media queries */
 
-/* header content */
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+    .pagination-column {
+        padding-right: 0;
+        padding-left: 15px;
+        text-align: left !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .pagination-column {
+      padding-right: 0;
+      padding-left: 15px;
+      text-align: left !important;
+    }
+}
 
 @media screen and (max-width: 920px) {
     .navbar-brand img {
@@ -309,6 +323,9 @@ footer.page-footer .footer-copyright {
       padding-left: 0 !important;
     }
     .opening-content {
+      padding-left: 0 !important;
+    }
+    .pagination-column {
       padding-left: 0 !important;
     }
     footer.page-footer .footer-copyright {
