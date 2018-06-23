@@ -243,6 +243,12 @@ footer.page-footer .footer-copyright {
     }
 }
 
+@media screen and (max-width: 568px) and (orientation: landscape) {
+    footer.page-footer .footer-copyright {
+      padding-left: 16px !important;
+    }
+}
+
 @media screen and (max-width: 512px) {
     .logo-column {
       margin-right: 0 !important;
