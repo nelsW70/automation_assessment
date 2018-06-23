@@ -163,11 +163,20 @@ header {
   color: rgba(36, 39, 48, 1);
 }
 
+.pagination-column {
+  position: fixed;
+  bottom: 50px;
+}
+
 .pagination-text-two {
   color: rgba(82, 144, 195, 1);
   font-family: 'Open Sans';
   font-weight: bold;
   font-size: 14px;
+}
+
+.pagination-text-two a {
+  color: inherit;
 }
 
 /* button primary */
@@ -244,7 +253,15 @@ footer.page-footer .footer-copyright {
     .text-questions-content, .text-questions-content-white-background {
     padding-top: 6rem;
     padding-bottom: 5rem;
-}
+    margin-left: 15px !important;
+    }
+    .pagination-column {
+      left: 28rem;
+    }
+    .opening-content {
+      margin-left: 0;
+      padding-left: 0;
+    }
 }
 
 @media screen and (max-width: 812px) and (orientation: portrait ){
@@ -276,10 +293,21 @@ footer.page-footer .footer-copyright {
     }
 }
 
-
 @media screen and (max-width: 768px) and (orientation: portrait ){
     .navbar-brand img {
         height: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape ){
+    .pagination-column {
+        left: 24rem;
+    }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape ){
+    .pagination-column {
+        left: 20rem;
     }
 }
 
@@ -293,6 +321,9 @@ footer.page-footer .footer-copyright {
 @media screen and (max-width: 568px) and (orientation: landscape) {
     footer.page-footer .footer-copyright {
       padding-left: 16px !important;
+    }
+    .pagination-column {
+        left: 21rem;
     }
 }
 
@@ -327,6 +358,9 @@ footer.page-footer .footer-copyright {
     }
     .pagination-column {
       padding-left: 0 !important;
+    }
+    .text-questions-content-white-background {
+      padding-top: 5rem;
     }
     footer.page-footer .footer-copyright {
       padding-left: 15px !important;
