@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Material Design Bootstrap -->
     <link href="../css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
@@ -48,24 +50,27 @@
               </h3>
               <div class="pt-3 checkbox-label-text">
                 <div class="form-check pl-0">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox1000a">
+                    <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1000a">
                     <label class="form-check-label" for="checkbox1000a">Less than 25%</label>
                 </div>
                 <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox1001a">
+                    <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1001a">
                     <label class="form-check-label" for="checkbox1001a">25% to 50%</label>
                 </div>
                 <div class="form-check pl-0 pt-3 ">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox1002a">
+                    <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1002a">
                     <label class="form-check-label" for="checkbox1002a">50% to 75%</label>
                 </div>
                 <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox1003a">
+                    <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1003a">
                     <label class="form-check-label" for="checkbox1003a">More than 75%</label>
                 </div>
               </div>
+              <div class="pt-4 thanks-div">
+                <h4 class="thanks-text">Thanks for completing the assessment, please submit.</h4>
+              </div>
               <div class="pt-4">
-                <a href=""><button type="button" class="btn btn-primary btn-rounded">Next Question</button></a>
+                <a href=""><button type="button" class="btn btn-primary btn-rounded">Submit</button></a>
               </div>
               <div class="d-lg-none pt-4">
                 <p class="pagination-text-one">
@@ -108,6 +113,13 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $('.thanks-reveal').change(function(){
+            $('.thanks-div').fadeIn('slow');
+      });
+    });
+    </script>
 </body>
 
 </html>

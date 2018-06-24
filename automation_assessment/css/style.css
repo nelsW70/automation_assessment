@@ -115,6 +115,19 @@ header {
   background-color: rgba(68, 104, 125, 1);
 }
 
+/* thanks for completing text */
+
+.thanks-text {
+  font-family: 'Open Sans';
+  font-size: 1.5rem;
+  color: rgba(245, 132, 102, 1);
+}
+
+/* thanks div that starts hidden/revealed when checkboxes are clicked */
+
+.thanks-div {
+  display: none;
+}
 
 /* overlay on which the main content sits */
 
