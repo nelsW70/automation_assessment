@@ -129,6 +129,20 @@ header {
   display: none;
 }
 
+/* submitted text */
+
+.submitted-text {
+  font-family: 'Open Sans';
+  font-size: 1.5rem;
+  color: rgba(153, 153, 0, 1);
+}
+
+/* submitted div */
+
+.submitted-div {
+  display: none;
+}
+
 /* overlay on which the main content sits */
 
 .overlay-one {
