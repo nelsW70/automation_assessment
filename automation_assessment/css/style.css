@@ -43,6 +43,12 @@ body{
   background-size: cover;
 }
 
+.text-questions-content-white-background {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
+
+
 /* background image masks */
 
 .rgba-black-strong {
@@ -255,9 +261,6 @@ footer.page-footer .footer-copyright {
     padding-bottom: 5rem;
     margin-left: 15px !important;
     }
-    .pagination-column {
-      left: 28rem;
-    }
     .opening-content {
       margin-left: 0;
       padding-left: 0;
@@ -269,13 +272,6 @@ footer.page-footer .footer-copyright {
       padding-left: 0 !important;
     }
     .text-questions-content {
-    padding-top: 6rem;
-    padding-bottom: 5rem;
-}
-}
-
-@media screen and (max-width: 812px) {
-    .text-questions-content-white-background {
     padding-top: 6rem;
     padding-bottom: 5rem;
 }
@@ -299,18 +295,6 @@ footer.page-footer .footer-copyright {
     }
 }
 
-@media screen and (max-width: 768px) and (orientation: landscape ){
-    .pagination-column {
-        left: 24rem;
-    }
-}
-
-@media screen and (max-width: 667px) and (orientation: landscape ){
-    .pagination-column {
-        left: 20rem;
-    }
-}
-
 @media screen and (max-width: 575px) {
     .text-questions-content, .text-questions-content-white-background {
       margin-left: 0 !important;
@@ -321,9 +305,6 @@ footer.page-footer .footer-copyright {
 @media screen and (max-width: 568px) and (orientation: landscape) {
     footer.page-footer .footer-copyright {
       padding-left: 16px !important;
-    }
-    .pagination-column {
-        left: 21rem;
     }
 }
 
@@ -354,9 +335,6 @@ footer.page-footer .footer-copyright {
       padding-left: 0 !important;
     }
     .opening-content {
-      padding-left: 0 !important;
-    }
-    .pagination-column {
       padding-left: 0 !important;
     }
     .text-questions-content-white-background {
