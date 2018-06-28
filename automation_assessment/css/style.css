@@ -155,6 +155,10 @@ header {
   color: rgba(255, 255, 255, 1);
 }
 
+.form-control, .form-control:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
 /* thanks for completing text */
 
 .thanks-text {
