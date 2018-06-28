@@ -134,7 +134,7 @@ header {
 /* contact form input */
 
 .sdlc-contact-info .form-control {
-  width: 23.5rem;
+  max-width: 20rem;
 }
 
 .md-form label {
