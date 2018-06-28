@@ -46,7 +46,7 @@
               <h3 class="question-header">
                 What automation tools do you currently use?
               </h3>
-              <div class="pt-3 checkbox-label-text">
+              <div class="pt-3 checkbox-label-text question-content">
                 <div class="form-check pl-0">
                     <input type="checkbox" class="filled-in form-check-input" id="checkbox100a">
                     <label class="form-check-label" for="checkbox100a">HP - QTP, UFT, LeannFT</label>
@@ -71,9 +71,17 @@
                     <input type="checkbox" class="filled-in form-check-input" id="checkbox105a">
                     <label class="form-check-label" for="checkbox105a">Others - Paid</label>
                 </div>
+                <div class="md-form answer-divs p1a-other-a">
+                    <input type="text" id="form1aa" class="form-control">
+                    <label for="form1aa">Please specify</label>
+                </div>
                 <div class="form-check pl-0 pt-3">
                     <input type="checkbox" class="filled-in form-check-input" id="checkbox106a">
                     <label class="form-check-label" for="checkbox106a">Others - Open Source</label>
+                </div>
+                <div class="md-form answer-divs p1a-other-b">
+                    <input type="text" id="form1ab" class="form-control">
+                    <label for="form1ab">Please specify</label>
                 </div>
               </div>
               <div class="pt-4">
@@ -120,6 +128,21 @@
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="../js/mdb.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+    $('#checkbox105a').click(function(){
+        $('.p1a-other-a').toggle('fast');
+      });
+    });
+    </script>
+    <script>
+    $(document).ready(function(){
+    $('#checkbox106a').click(function(){
+        $('.p1a-other-b').toggle('fast');
+      });
+    });
+    </script>
 </body>
 
 </html>
