@@ -67,7 +67,7 @@
                     <input type="checkbox" class="filled-in form-check-input" id="checkbox404a">
                     <label class="form-check-label" for="checkbox404a">Others</label>
                 </div>
-                <div class="md-form answer-divs">
+                <div class="md-form answer-divs p4a-other-a">
                     <input type="text" id="form4aa" class="form-control">
                     <label for="form4aa">Please specify</label>
                 </div>
@@ -114,6 +114,15 @@
       <script type="text/javascript" src="../js/bootstrap.min.js"></script>
       <!-- MDB core JavaScript -->
       <script type="text/javascript" src="../js/mdb.min.js"></script>
+
+      <script>
+      //toggles visibility on the "other" input fields
+      $(document).ready(function(){
+      $('#checkbox404a').click(function(){
+          $('.p4a-other-a').toggle('fast');
+        });
+      });
+      </script>
 </body>
 
 </html>

@@ -193,7 +193,8 @@ header {
 
 /* "other" hidden divs that toggle on click */
 
-.p1a-other-a, .p1a-other-b {
+.p1a-other-a, .p1a-other-b, .p3a-other-a,.p4a-other-a, .p9a-other-a, .p1b-other-a, .p4b-other-a,
+.p5b-other-a, .p8b-other-a {
   display: none;
 }
 
