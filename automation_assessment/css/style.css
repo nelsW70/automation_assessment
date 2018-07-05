@@ -331,7 +331,7 @@ footer.page-footer .footer-copyright {
 
 /* snack bar */
 
-#snackbar {
+#snackbar, #snackbar-thanks {
   visibility: hidden;
   min-width: 100%;
   background-color: rgba(69, 105, 125, 1);
@@ -348,10 +348,20 @@ footer.page-footer .footer-copyright {
   font-size: 17px;
 }
 
-#snackbar.show {
+#snackbar-thanks {
+  z-index: 2;
+}
+
+#snackbar.show, #snackbar-thanks.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
   animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+#snackbar-thanks.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
 }
 
 @-webkit-keyframes fadein {

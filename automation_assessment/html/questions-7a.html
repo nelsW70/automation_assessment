@@ -46,27 +46,29 @@
               <h3 class="question-header">
                 How many automation testers do you have in your team/company?
               </h3>
-              <div class="pt-3 checkbox-label-text question-content">
-                <div class="form-check pl-0">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox700a">
-                    <label class="form-check-label" for="checkbox700a">1 to 2</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox701a">
-                    <label class="form-check-label" for="checkbox701a">2 to 5</label>
-                </div>
-                <div class="form-check pl-0 pt-3 ">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox702a">
-                    <label class="form-check-label" for="checkbox702a">5 to 10</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox703a">
-                    <label class="form-check-label" for="checkbox703a">More than 10</label>
-                </div>
-              </div>
-              <div class="pt-4">
-                <a href="questions-8a.html"><button type="button" class="btn btn-primary btn-rounded">Next Question</button></a>
-              </div>
+                <form method="post" action="questions-8a.html">
+                  <div class="pt-3 checkbox-label-text question-content">
+                    <div class="form-check pl-0">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox700a">
+                        <label class="form-check-label" for="checkbox700a">1 to 2</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox701a">
+                        <label class="form-check-label" for="checkbox701a">2 to 5</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3 ">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox702a">
+                        <label class="form-check-label" for="checkbox702a">5 to 10</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox703a">
+                        <label class="form-check-label" for="checkbox703a">More than 10</label>
+                    </div>
+                  </div>
+                  <div class="pt-4">
+                    <a href="questions-8a.html"><button type="submit" name="submit" value="Submit" class="btn btn-primary btn-rounded">Next Question</button></a>
+                  </div>
+                </form>
               <div class="d-lg-none pt-4">
                 <p class="pagination-text-one">
                   Q7 of 10<span class="pagination-text-two pl-4"><a href="questions-6a.html">&#8592; Prev </a>|<a href="questions-8a.html"> Next &#8594;</a></span>
@@ -82,6 +84,9 @@
         </div>
       </div>
     </section>
+
+    <!-- snackbar error message -->
+    <div id="snackbar">Please select at least one checkbox</div>
 
     <!-- Footer -->
       <footer class="page-footer font-small blue-grey lighten-5 mt-4">
@@ -108,6 +113,23 @@
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="../js/mdb.min.js"></script>
+
+    <script>
+    //ensures one checkbox is selected and displays snackbar if not
+    $(document).ready(function(){
+      $("form").submit(function(){
+      if ($('input:checkbox').filter(':checked').length < 1){
+          snackBar();
+      return false;
+      }
+      });
+    });
+    function snackBar() {
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    }
+    </script>
 </body>
 
 </html>
