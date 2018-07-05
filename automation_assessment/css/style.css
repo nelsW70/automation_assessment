@@ -334,7 +334,7 @@ footer.page-footer .footer-copyright {
 #snackbar, #snackbar-thanks {
   visibility: hidden;
   min-width: 100%;
-  background-color: rgba(69, 105, 125, 1);
+  background-color: #A13E3E;
   color: #fff;
   font-family: 'Open Sans';
   font-size: 1.25rem !important;
@@ -350,6 +350,7 @@ footer.page-footer .footer-copyright {
 
 #snackbar-thanks {
   z-index: 2;
+  background-color: rgba(69, 105, 125, 1);
 }
 
 #snackbar.show, #snackbar-thanks.show {
