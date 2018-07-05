@@ -46,47 +46,49 @@
               <h3 class="question-header">
                 What automation tools do you currently use?
               </h3>
-              <div class="pt-3 checkbox-label-text question-content">
-                <div class="form-check pl-0">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox100a">
-                    <label class="form-check-label" for="checkbox100a">HP - QTP, UFT, LeannFT</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox101a">
-                    <label class="form-check-label" for="checkbox101a">IBM - RFT</label>
-                </div>
-                <div class="form-check pl-0 pt-3 ">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox102a">
-                    <label class="form-check-label" for="checkbox102a">Selenium</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox103a">
-                    <label class="form-check-label" for="checkbox103a">Microsoft - Coded UI</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox104a">
-                    <label class="form-check-label" for="checkbox104a">Performance Testing Tool</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox105a">
-                    <label class="form-check-label" for="checkbox105a">Other - Paid</label>
-                </div>
-                <div class="md-form answer-divs p1a-other-a">
-                    <input type="text" id="form1aa" class="form-control">
-                    <label for="form1aa">Please specify</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox106a">
-                    <label class="form-check-label" for="checkbox106a">Other - Open Source</label>
-                </div>
-                <div class="md-form answer-divs p1a-other-b">
-                    <input type="text" id="form1ab" class="form-control">
-                    <label for="form1ab">Please specify</label>
-                </div>
-              </div>
-              <div class="pt-4">
-                <a href="questions-2a.html"><button type="button" class="btn btn-primary btn-rounded">Next Question</button></a>
-              </div>
+                <form method="post" action="questions-2a.html">
+                  <div class="pt-3 checkbox-label-text question-content">
+                    <div class="form-check pl-0">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox100a">
+                        <label class="form-check-label" for="checkbox100a">HP - QTP, UFT, LeannFT</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox101a">
+                        <label class="form-check-label" for="checkbox101a">IBM - RFT</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3 ">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox102a">
+                        <label class="form-check-label" for="checkbox102a">Selenium</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox103a">
+                        <label class="form-check-label" for="checkbox103a">Microsoft - Coded UI</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox104a">
+                        <label class="form-check-label" for="checkbox104a">Performance Testing Tool</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox105a">
+                        <label class="form-check-label" for="checkbox105a">Other - Paid</label>
+                    </div>
+                    <div class="md-form answer-divs p1a-other-a">
+                        <input type="text" id="form1aa" class="form-control">
+                        <label for="form1aa">Please specify</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox106a">
+                        <label class="form-check-label" for="checkbox106a">Other - Open Source</label>
+                    </div>
+                    <div class="md-form answer-divs p1a-other-b">
+                        <input type="text" id="form1ab" class="form-control">
+                        <label for="form1ab">Please specify</label>
+                    </div>
+                  </div>
+                  <div class="pt-4">
+                    <a href="questions-2a.html"><button type="submit" name="submit" value="Submit" class="btn btn-primary btn-rounded">Next Question</button></a>
+                  </div>
+                </form>
               <div class="d-lg-none pt-4">
                 <p class="pagination-text-one">
                   Q1 of 10<span class="pagination-text-two pl-4"><a href="questions.html">&#8592; Prev </a>|<a href="questions-2a.html"> Next &#8594;</a></span>
@@ -102,6 +104,8 @@
         </div>
       </div>
     </section>
+
+    <div id="snackbar">Please select at least one checkbox</div>
 
     <!-- Footer -->
       <footer class="page-footer font-small blue-grey lighten-5 mt-4">
@@ -143,6 +147,22 @@
         $('.p1a-other-b').toggle('fast');
       });
     });
+    </script>
+    <script>
+    // ensures on checkbox is checked and shows snackbar if not
+    $(document).ready(function(){
+      $("form").submit(function(){
+      if ($('input:checkbox').filter(':checked').length < 1){
+          snackBar();
+      return false;
+      }
+      });
+    });
+    function snackBar() {
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    }
     </script>
 </body>
 

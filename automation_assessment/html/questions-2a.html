@@ -47,7 +47,6 @@
                 What kind of automation frameworks do you currently use?
               </h3>
               <form method="post" action="questions-3a.html">
-
                 <div class="pt-3 checkbox-label-text question-content">
                   <div class="form-check pl-0">
                       <input type="checkbox" class="filled-in form-check-input" id="checkbox200a">
@@ -65,9 +64,7 @@
                 <div class="pt-4">
                   <a href="questions-3a.html"><button type="submit" name="submit" value="Submit" class="btn btn-primary btn-rounded">Next Question</button></a>
                 </div>
-
               </form>
-
               <div class="d-lg-none pt-4">
                 <p class="pagination-text-one">
                   Q2 of 10<span class="pagination-text-two pl-4"><a href="questions-1a.html">&#8592; Prev </a>|<a href="questions-3a.html"> Next &#8594;</a></span>
@@ -85,8 +82,7 @@
     </section>
 
     <!-- snackbar error message -->
-
-    <div id="snackbar">Please choose at least one checkbox</div>
+    <div id="snackbar">Please select at least one checkbox</div>
 
     <!-- Footer -->
       <footer class="page-footer font-small blue-grey lighten-5 mt-4">
@@ -113,6 +109,7 @@
     <script type="text/javascript" src="../js/mdb.min.js"></script>
 
     <script>
+    //ensures one checkbox is selected and displays snackbar if not
     $(document).ready(function(){
       $("form").submit(function(){
       if ($('input:checkbox').filter(':checked').length < 1){

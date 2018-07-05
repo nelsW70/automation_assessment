@@ -333,16 +333,17 @@ footer.page-footer .footer-copyright {
 
 #snackbar {
   visibility: hidden;
-  min-width: 350px;
-  margin-left: -175px;
+  min-width: 100%;
   background-color: rgba(69, 105, 125, 1);
   color: #fff;
+  font-family: 'Open Sans';
+  font-size: 1.25rem !important;
+  font-weight: 600;
   text-align: center;
-  border-radius: 10px;
   padding: 16px;
   position: fixed;
   z-index: 1;
-  left: 50%;
+  left: 0;
   bottom: 48px;
   font-size: 17px;
 }
@@ -369,7 +370,7 @@ footer.page-footer .footer-copyright {
 }
 
 @keyframes fadeout {
-    from {bottom: 48px; opacity: 1;}
+    from {bottom: 50px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
 }
 

@@ -46,31 +46,33 @@
               <h3 class="question-header">
                 What methodologies do you use in your Software Development Cycle?
               </h3>
-              <div class="pt-3 checkbox-label-text question-content">
-                <div class="form-check pl-0">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox300a">
-                    <label class="form-check-label" for="checkbox300a">Waterfall</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox301a">
-                    <label class="form-check-label" for="checkbox301a">Agile/Iteration</label>
-                </div>
-                <div class="form-check pl-0 pt-3 ">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox302a">
-                    <label class="form-check-label" for="checkbox302a">DevOps/ CI/ CD</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox303a">
-                    <label class="form-check-label" for="checkbox303a">Other</label>
-                </div>
-                <div class="md-form answer-divs p3a-other-a">
-                    <input type="text" id="form3aa" class="form-control">
-                    <label for="form3aa">Please specify</label>
-                </div>
-              </div>
-              <div class="pt-4">
-                <a href="questions-4a.html"><button type="button" class="btn btn-primary btn-rounded">Next Question</button></a>
-              </div>
+                <form method="post" action="questions-4a.html">
+                  <div class="pt-3 checkbox-label-text question-content">
+                    <div class="form-check pl-0">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox300a">
+                        <label class="form-check-label" for="checkbox300a">Waterfall</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox301a">
+                        <label class="form-check-label" for="checkbox301a">Agile/Iteration</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3 ">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox302a">
+                        <label class="form-check-label" for="checkbox302a">DevOps/ CI/ CD</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox303a">
+                        <label class="form-check-label" for="checkbox303a">Other</label>
+                    </div>
+                    <div class="md-form answer-divs p3a-other-a">
+                        <input type="text" id="form3aa" class="form-control">
+                        <label for="form3aa">Please specify</label>
+                    </div>
+                  </div>
+                  <div class="pt-4">
+                    <a href="questions-4a.html"><button type="submit" name="submit" value="Submit"  class="btn btn-primary btn-rounded">Next Question</button></a>
+                  </div>
+                </form>
               <div class="d-lg-none pt-4">
                 <p class="pagination-text-one">
                   Q3 of 10<span class="pagination-text-two pl-4"><a href="questions-2a.html">&#8592; Prev </a>|<a href="questions-4a.html"> Next &#8594;</a></span>
@@ -86,6 +88,9 @@
         </div>
       </div>
     </section>
+
+    <!-- snackbar error message -->
+    <div id="snackbar">Please select at least one checkbox</div>
 
     <!-- Footer -->
       <footer class="page-footer font-small blue-grey lighten-5 mt-4">
@@ -118,6 +123,22 @@
           $('.p3a-other-a').toggle('fast');
         });
       });
+      </script>
+      <script>
+      //ensures one checkbox is selected and displays snackbar if not
+      $(document).ready(function(){
+        $("form").submit(function(){
+        if ($('input:checkbox').filter(':checked').length < 1){
+            snackBar();
+        return false;
+        }
+        });
+      });
+      function snackBar() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+      }
       </script>
 </body>
 
