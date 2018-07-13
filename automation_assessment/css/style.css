@@ -99,6 +99,41 @@ header {
   font-weight: bold;
 }
 
+.report-header {
+  font-family: 'Open Sans';
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.report-answer {
+  font-family: 'Open Sans';
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* hr line color */
+
+hr {
+  border: 1px solid rgba(186, 186, 186, .5);
+}
+
+/* report div outline colors */
+
+.red-answer {
+  background-color: rgba(236, 52, 37, .5);
+  border-radius: 10px;
+}
+
+.yellow-answer {
+  background-color: rgba(255, 254, 85, .5);
+  border-radius: 10px;
+}
+
+.green-answer {
+  background-color: rgba(54, 125, 35, .5);
+  border-radius: 10px;
+}
+
 /* checkbox label text */
 
 .checkbox-label-text .form-check-label {
@@ -444,6 +479,12 @@ footer.page-footer .footer-copyright {
     }
     .copyright-div {
       padding-left: 2px !important;
+    }
+}
+
+@media screen and (min-width: 667px) {
+    .report-main-content {
+      max-width: 75%;
     }
 }
 
