@@ -1,0 +1,565 @@
+
+body, html {
+  height: 100%;
+}
+
+body{
+font-size:16px;
+}
+
+/* full page background image */
+
+.bg {
+/* The image used */
+background-image: url("../assets/images/fotolia_104477267.png");
+
+/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.bg-two {
+/* The image used */
+background-image: url("../assets/images/fotolia_104477267-BW.png");
+
+/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.text-questions-content-white-background {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+
+
+/* background image masks */
+
+.rgba-black-strong {
+background-color: rgba(0,0,0,.5);
+}
+
+.rgba-white-strong {
+background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* fake navbar */
+
+header {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+z-index: 999;
+height: 95px;
+}
+
+/* navbar styling */
+
+.header-info {
+background-color: rgba(255, 255, 255, 1);
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+position: relative;
+}
+
+/* navbar text */
+
+.header-title {
+font-family: 'Roboto Slab';
+color: rgba(68, 104, 125, 1);
+font-size: 1.5rem;
+}
+
+/* main content text */
+
+.opening-blurb-text {
+color: rgba(255, 255, 255, 1);
+font-family: 'Open Sans';
+font-size: 1.25rem;
+line-height: 1.75;
+}
+
+.main-content {
+height: 100vh;
+}
+
+/* question header text */
+
+.question-header {
+font-family: 'Open Sans';
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.report-header {
+font-family: 'Open Sans';
+font-size: 1.2rem;
+font-weight: 500;
+}
+
+.report-answer {
+font-family: 'Open Sans';
+font-size: 1.2rem;
+font-weight: 300;
+}
+
+/* hr line color */
+
+hr {
+border: 1px solid rgba(186, 186, 186, .5);
+}
+
+/* report div outline colors */
+
+.red-answer {
+background-color: rgba(236, 52, 37, .5);
+border-radius: 10px;
+}
+
+.yellow-answer {
+background-color: rgba(255, 254, 85, .5);
+border-radius: 10px;
+}
+
+.green-answer {
+background-color: rgba(54, 125, 35, .5);
+border-radius: 10px;
+}
+
+/* checkbox label text */
+
+.checkbox-label-text .form-check-label {
+color: rgba(36, 39, 48, 1);
+font-family: 'Open Sans';
+font-size: 1.25rem;
+line-height: 1.28rem;
+}
+
+/* checkbox before/after colors */
+
+[type=checkbox][class*=filled-in]:checked+label:after {
+border-color: rgba(68, 104, 125, 1);
+background-color: rgba(68, 104, 125, 1);
+}
+
+/* contact header text */
+
+.contact .question-header {
+color: rgba(255, 255, 255, 1);
+font-family: 'Open Sans';
+font-size: 1.25rem;
+}
+
+/* contact form input */
+
+.sdlc-contact-info .form-control {
+max-width: 20rem;
+}
+
+.md-form label {
+color: rgba(255, 255, 255, 1);
+font-family: 'Open Sans';
+}
+
+.md-form input[type=text]:focus:not([readonly]), .md-form input[type=email]:focus:not([readonly]),
+.md-form input[type=tel]:focus:not([readonly]) {
+box-shadow: 0 1px 0 0 rgba(255, 255, 255, 1);
+border-bottom: 1px solid rgba(255, 255, 255, 1);
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgba(255, 255, 255, 1);
+}
+
+.md-form input[type=text]:focus:not([readonly])+label, .md-form input[type=email]:focus:not([readonly])+label,
+.md-form input[type=tel]:focus:not([readonly])+label {
+color: rgba(255, 255, 255, 1);
+}
+
+.form-control, .form-control:focus {
+color: rgba(255, 255, 255, 1);
+}
+
+/* "other" input field divs */
+
+.answer-divs {
+margin-left: 2.25rem;
+}
+
+/* "other" input fields */
+
+.question-content .md-form label {
+color: rgba(36, 39, 48, 1);
+font-family: 'Open Sans';
+}
+
+.question-content .md-form {
+margin-top: 1rem;
+}
+
+.question-content .form-control {
+max-width: 14rem;
+}
+
+.question-content .md-form input[type=text]:focus:not([readonly]), .question-content.md-form input[type=email]:focus:not([readonly]),
+.question-content .md-form input[type=tel]:focus:not([readonly]) {
+box-shadow: 0 1px 0 0 rgba(36, 39, 48, 1);
+border-bottom: 1px solid rgba(36, 39, 48, 1);
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgba(36, 39, 48, 1);
+}
+
+.question-content .md-form input[type=text]:focus:not([readonly])+label, .question-content .md-form input[type=email]:focus:not([readonly])+label,
+.question-content .md-form input[type=tel]:focus:not([readonly])+label {
+color: rgba(36, 39, 48, 1);
+}
+
+.question-content .form-control, .question-content .form-control:focus {
+color: rgba(36, 39, 48, 1);
+}
+
+/* "other" hidden divs that toggle on click */
+
+.p1a-other-a, .p1a-other-b, .p3a-other-a,.p4a-other-a, .p9a-other-a, .p1b-other-a, .p4b-other-a,
+.p5b-other-a, .p8b-other-a {
+display: none;
+}
+
+.hide{
+  display:none
+}
+
+
+/* thanks for completing text */
+
+.thanks-text {
+font-family: 'Open Sans';
+font-size: 1.5rem;
+color: rgba(245, 132, 102, 1);
+}
+
+/* thanks div that starts hidden/revealed when checkboxes are clicked */
+
+.thanks-div {
+display: none;
+}
+
+/* submitted text */
+
+.submitted-text {
+font-family: 'Open Sans';
+font-size: 1.5rem;
+color: rgba(153, 153, 0, 1);
+}
+
+/* submitted div */
+
+.submitted-div {
+display: none;
+}
+
+/* overlay on which the main content sits */
+
+.overlay-one {
+position: absolute;
+/*top: 95px;*/
+bottom: 0;
+left: 0;
+right: 0;
+height: 95%;
+width: 100%;
+opacity: 1;
+background-color: transparent;
+overflow-y: scroll;
+padding-left: 15px;
+padding-right: 15px;
+}
+
+/* text questions content row */
+
+.text-questions-content {
+padding-top: 12rem;
+}
+
+.text-questions-content-white-background {
+padding-top: 8rem;
+}
+
+/* text questions div */
+
+.intro-text-div {
+padding-right: 0;
+}
+
+/* pagination column */
+
+.pagination-column {
+padding-left: 15rem;
+}
+
+.pagination-text-one {
+font-family: 'Open Sans';
+font-size: .75rem;
+color: rgba(36, 39, 48, 1);
+}
+
+.pagination-column {
+position: fixed;
+bottom: 50px;
+}
+
+.pagination-text-two {
+color: rgba(82, 144, 195, 1);
+font-family: 'Open Sans';
+font-weight: bold;
+font-size: 14px;
+}
+
+.pagination-text-two a {
+color: inherit;
+}
+
+/* button primary */
+
+button {
+  min-width: 178px;
+}
+
+.btn-primary {
+background-color: rgb(95, 143, 191) !important;
+border-radius: 10px;
+font-family: 'Open Sans';
+font-size: .95rem;
+font-weight: 600;
+margin-left: 0;
+padding: .6rem 1.25rem;
+text-transform: none;
+}
+
+.btn-primary:hover {
+filter: brightness(115%);
+}
+
+/* footer */
+
+footer.page-footer {
+margin-top: 0px !important;
+}
+
+footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+z-index: 999;
+}
+
+footer.page-footer .footer-copyright {
+background-color: rgb(54, 57, 56);
+color: white;
+font-family: 'Open Sans';
+font-size: 11px;
+}
+
+/* snack bar */
+
+#snackbar, #snackbar-thanks {
+visibility: hidden;
+min-width: 100%;
+background-color: #A13E3E;
+color: #fff;
+font-family: 'Open Sans';
+font-size: 1.25rem !important;
+font-weight: 600;
+text-align: center;
+padding: 16px;
+position: fixed;
+z-index: 1;
+left: 0;
+bottom: 48px;
+font-size: 17px;
+}
+
+#snackbar-thanks {
+z-index: 2;
+background-color: rgba(69, 105, 125, 1);
+}
+
+#snackbar.show, #snackbar-thanks.show {
+visibility: visible;
+-webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+#snackbar-thanks.show {
+visibility: visible;
+-webkit-animation: fadein 0.5s;
+animation: fadein 0.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 48px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 48px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 48px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 50px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+/* a lot of media queries */
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .pagination-column {
+      padding-right: 0;
+      padding-left: 15px;
+      text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .pagination-column {
+    padding-right: 0;
+    padding-left: 15px;
+    text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .navbar-brand img {
+      height: 50px;
+  }
+}
+
+@media screen and (max-width: 812px) and (orientation: landscape ){
+  .navbar-brand img {
+      height: 50px;
+  }
+  .text-questions-content, .text-questions-content-white-background {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  margin-left: 15px !important;
+  }
+  .opening-content {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 812px) and (orientation: portrait ){
+  .logo-section {
+    padding-left: 0 !important;
+  }
+  .text-questions-content {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+}
+
+@media screen and (max-width: 812px) {
+  .logo-section {
+    padding-left: 0 !important;
+  }
+  footer.page-footer .footer-copyright {
+    padding-left: 30px !important;
+  }
+  .copyright-div {
+    padding-left: 2px !important;
+  }
+}
+
+@media screen and (min-width: 667px) {
+  .report-main-content {
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait ){
+  .navbar-brand img {
+      height: 50px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .text-questions-content, .text-questions-content-white-background {
+    margin-left: 0 !important;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 568px) and (orientation: landscape) {
+  footer.page-footer .footer-copyright {
+    padding-left: 16px !important;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .logo-column {
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .navbar-brand img {
+    height: 40px;
+  }
+  .header-title {
+    font-size: 1.25rem;
+    padding-top: .5rem !important;
+  }
+}
+
+@media screen and (max-width: 414px) and (orientation: portrait ){
+  .header-main-text {
+    padding-left: 0 !important;
+  }
+  .header-title {
+    font-size: 1.25rem;
+  }
+  .logo-column, .logo-section {
+    padding-left: 0 !important;
+  }
+  .opening-content {
+    padding-left: 0 !important;
+  }
+  .text-questions-content-white-background {
+    padding-top: 5rem;
+  }
+  footer.page-footer .footer-copyright {
+    padding-left: 15px !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+.navbar-brand img {
+  height: 30px;
+}
+.navbar-brand {
+  margin-right: 0;
+}
+.logo-column {
+  padding-right: 0;
+}
+.header-title {
+  font-size: 1rem;
+}
+}
