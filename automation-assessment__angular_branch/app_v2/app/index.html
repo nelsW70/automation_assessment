@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="assessment-app">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Automation Assessment</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/vendor/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body ng-class="bodyClass" ng-controller="GlobalController" ng-init="onInit()">
+
+    <ng-include src="'views/shared/header.htm'"></ng-include>
+
+    <ng-view></ng-view>
+
+    <ng-include src="'views/shared/footer.htm'"></ng-include>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/vendor/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/vendor/mdb.min.js"></script>
+    <!-- Angular library -->
+    <script type="text/javascript" src="js/vendor/angular.min.js"></script>
+    <!-- Angular Route -->
+    <script type="text/javascript" src="js/vendor/angular-route.min.js"></script>
+    <!-- App Level JS -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- Common -->
+    <script type="text/javascript" src="js/common/GlobalController.js"></script>
+    <!-- Data -->
+    <script type="text/javascript" src="js/businessrule/businessrule.js"></script>
+    <script type="text/javascript" src="js/questions/no.js"></script>
+    <script type="text/javascript" src="js/questions/yes.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="js/services/AssessmentService.js"></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src="views/partial/home/home.js"></script>
+    <script type="text/javascript" src="views/partial/contact-info/contact-info.js"></script>
+    <script type="text/javascript" src="views/partial/start/start.js"></script>
+    <script type="text/javascript" src="views/partial/question/question.js"></script>
+    <script type="text/javascript" src="views/partial/report/report.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!-- main content -->
+<section class="container-fluid mask rgba-black-strong contact">
+    <div class="main-content">
+      <div class="overlay-one">
+        <div class="row d-flex ml-4 text-questions-content-white-background animated fadeIn pl-1">
+          <div class="col-sm-10 offset-sm-2 col-md-10 offset-md-2 col-lg-10 offset-lg-2 opening-content">
+            <h3 class="question-header">
+              Please let us know who you are
+            </h3>
+            <form ng-submit="submit()">
+              <div class="pt-2 sdlc-contact-info">
+                <div class="md-form form-sm form-group">
+                    <input type="text" id="first-name" class="form-control" required ng-model="contactInfo.firstName">
+                    <label for="inputMDEx">First Name*</label>
+                </div>
+                <div class="md-form form-sm pt-2 form-group ">
+                    <input type="text" id="last-name" class="form-control" required ng-model="contactInfo.lastName">
+                    <label for="inputMDEx">Last Name*</label>
+                </div>
+                <div class="md-form form-sm pt-2 form-group">
+                    <input type="email" id="email" class="form-control" required ng-model="contactInfo.email">
+                    <label for="inputMDEx">Email*</label>
+                </div>
+                <div class="md-form form-sm pt-2 form-group ">
+                    <input type="tel" id="phone" class="form-control" required ng-model="contactInfo.phone" ng-keyup="onPhoneKeyUp($event)">
+                    <label for="inputMDEx">Phone*</label>
+                </div>
+                <div class="md-form form-sm pt-2 form-group">
+                    <input type="text" id="address" class="form-control" ng-model="contactInfo.address" required>
+                    <label for="inputMDEx">Address*</label>
+                </div>
+                <div class="md-form form-sm pt-2 form-group">
+                    <input type="text" id="city" class="form-control" required ng-model="contactInfo.city"> 
+                    <label for="inputMDEx">City*</label>
+                </div>
+                <div class="md-form form-sm pt-2 form-group">
+                    <input type="text" id="zip" class="form-control" required ng-model="contactInfo.zip">
+                    <label for="inputMDEx">Zip*</label>
+                </div>
+              </div>
+              <div class="pt-4">
+                <button type="submit" value="Submit" class="btn btn-primary btn-rounded" id="submit-button">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

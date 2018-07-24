@@ -1,0 +1,41 @@
+<section class="container-fluid mask rgba-white-strong" ng-init="onInit()">
+    <div class="main-content">
+      <div class="overlay-one">
+        <div class="row d-flex ml-4 text-questions-content-white-background report-main-content animated fadeIn pl-1">
+          <div class="col-sm-10 offset-sm-2 col-md-10 offset-md-2 col-lg-10 offset-lg-2 opening-conten">
+            <h3 class="report-header">
+              Company Name
+            </h3>
+            <h3 class="report-header pt-2 pb-2">{{user.firstName}}  <span>{{user.lastName}}</span></h3>
+            <hr />
+            <div class="pt-2 question-content" ng-repeat="question in questions">
+              <h3 class="report-header">{{$index+1}}. {{question.text}}</h3>
+              <h3 class="report-answer pt-2 font-italic">
+                <span ng-repeat="answer in question.selectedAnswers">
+                    {{answer}}
+                    <span ng-if="!$last">,</span>
+                </span>
+              </h3>
+            </div>
+            <div class="pt-4 report-suggestions">
+              <div class="py-3 px-3" ng-class="matchedRule.level">
+                <h5>
+                  {{matchedRule.message}}
+                </h5>
+              </div>
+              <!-- <div class="yellow-answer py-3 px-3 mt-4">
+                <h5>
+                  Paragraph Two
+                </h5>
+              </div>
+              <div class="green-answer py-3 px-3 mt-4">
+                <h5>
+                  Paragraph Three
+                </h5>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
