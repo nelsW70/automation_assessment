@@ -46,35 +46,37 @@
               <h3 class="question-header">
                 How frequent are your release cycles?
               </h3>
-              <div class="pt-3 checkbox-label-text question-content">
-                <div class="form-check pl-0">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox500b">
-                    <label class="form-check-label" for="checkbox500b">Biweekly</label>
+              <form method="post" action="questions-6b.html">
+                <div class="pt-3 checkbox-label-text question-content">
+                  <div class="form-check pl-0">
+                      <input type="checkbox" class="filled-in form-check-input" id="checkbox500b">
+                      <label class="form-check-label" for="checkbox500b">Biweekly</label>
+                  </div>
+                  <div class="form-check pl-0 pt-3">
+                      <input type="checkbox" class="filled-in form-check-input" id="checkbox501b">
+                      <label class="form-check-label" for="checkbox501b">Monthly</label>
+                  </div>
+                  <div class="form-check pl-0 pt-3">
+                      <input type="checkbox" class="filled-in form-check-input" id="checkbox502b">
+                      <label class="form-check-label" for="checkbox502b">Quarterly</label>
+                  </div>
+                  <div class="form-check pl-0 pt-3">
+                      <input type="checkbox" class="filled-in form-check-input" id="checkbox503b">
+                      <label class="form-check-label" for="checkbox503b">Semi Annual</label>
+                  </div>
+                  <div class="form-check pl-0 pt-3">
+                      <input type="checkbox" class="filled-in form-check-input" id="checkbox504b">
+                      <label class="form-check-label" for="checkbox504b">Other</label>
+                  </div>
+                  <div class="md-form answer-divs p5b-other-a">
+                      <input type="text" id="form5ba" class="form-control">
+                      <label for="form5ba">Please specify</label>
+                  </div>
                 </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox501b">
-                    <label class="form-check-label" for="checkbox501b">Monthly</label>
+                <div class="pt-4">
+                  <a href="questions-6b.html"><button type="submit" name="submit" value="Submit" class="btn btn-primary btn-rounded">Next Question</button></a>
                 </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox502b">
-                    <label class="form-check-label" for="checkbox502b">Quarterly</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox503b">
-                    <label class="form-check-label" for="checkbox503b">Semi Annual</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input" id="checkbox504b">
-                    <label class="form-check-label" for="checkbox504b">Other</label>
-                </div>
-                <div class="md-form answer-divs p5b-other-a">
-                    <input type="text" id="form5ba" class="form-control">
-                    <label for="form5ba">Please specify</label>
-                </div>
-              </div>
-              <div class="pt-4">
-                <a href="questions-6b.html"><button type="button" class="btn btn-primary btn-rounded">Next Question</button></a>
-              </div>
+              </form>
               <div class="d-lg-none pt-4">
                 <p class="pagination-text-one">
                   Q5 of 10<span class="pagination-text-two pl-4"><a href="questions-4b.html">&#8592; Prev </a>|<a href="questions-6b.html"> Next &#8594;</a></span>
@@ -90,6 +92,8 @@
         </div>
       </div>
     </section>
+
+    <div id="snackbar">Please select at least one checkbox</div>
 
     <!-- Footer -->
       <footer class="page-footer font-small blue-grey lighten-5 mt-4">
@@ -124,6 +128,23 @@
         $('.p5b-other-a').toggle('fast');
       });
     });
+    </script>
+
+    <script>
+    // ensures on checkbox is checked and shows snackbar if not
+    $(document).ready(function(){
+      $("form").submit(function(){
+      if ($('input:checkbox').filter(':checked').length < 1){
+          snackBar();
+      return false;
+      }
+      });
+    });
+    function snackBar() {
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    }
     </script>
 </body>
 

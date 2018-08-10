@@ -48,33 +48,29 @@
               <h3 class="question-header">
                 What are the skill sets already existing within the team/company?
               </h3>
-              <div class="pt-3 checkbox-label-text question-content">
-                <div class="form-check pl-0">
-                    <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1000b">
-                    <label class="form-check-label" for="checkbox1000b">Descriptive Programming resource</label>
+              <form method="post" onsubmit="return false">
+                <div class="pt-3 checkbox-label-text question-content">
+                  <div class="form-check pl-0">
+                      <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1000b">
+                      <label class="form-check-label" for="checkbox1000b">Descriptive Programming resource</label>
+                  </div>
+                  <div class="form-check pl-0 pt-3">
+                      <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1001b">
+                      <label class="form-check-label" for="checkbox1001b">Record &#38; Play resource</label>
+                  </div>
+                  <div class="form-check pl-0 pt-3 ">
+                      <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1002b">
+                      <label class="form-check-label" for="checkbox1002b">Both</label>
+                  </div>
+                  <div class="form-check pl-0 pt-3">
+                      <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1003b">
+                      <label class="form-check-label" for="checkbox1003b">None</label>
+                  </div>
                 </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1001b">
-                    <label class="form-check-label" for="checkbox1001b">Record &#38; Play resource</label>
+                <div class="pt-4">
+                  <a><button  type="submit" name="submit" value="Submit" class="btn btn-primary btn-rounded" id="submit-b">Submit</button></a>
                 </div>
-                <div class="form-check pl-0 pt-3 ">
-                    <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1002b">
-                    <label class="form-check-label" for="checkbox1002b">Both</label>
-                </div>
-                <div class="form-check pl-0 pt-3">
-                    <input type="checkbox" class="filled-in form-check-input thanks-reveal" id="checkbox1003b">
-                    <label class="form-check-label" for="checkbox1003b">None</label>
-                </div>
-              </div>
-              <div class="pt-4 thanks-div">
-                <h4 class="thanks-text pt-2">Thanks for completing the assessment, please submit.</h4>
-              </div>
-              <div class="pt-4 submitted-div">
-                <h4 class="submitted-text pt-2">Your assessment has been submitted.</h4>
-              </div>
-              <div class="pt-4">
-                <a><button type="button" class="btn btn-primary btn-rounded" id="submit-b">Submit</button></a>
-              </div>
+              </form>
               <div class="d-lg-none pt-4">
                 <p class="pagination-text-one">
                   Q10 of 10<span class="pagination-text-two pl-4"><a href="questions-9b.html">&#8592; Prev </a>|<a> Next &#8594;</a></span>
@@ -90,6 +86,10 @@
         </div>
       </div>
     </section>
+
+    <!-- snackbar error message -->
+    <div id="snackbar">Please select at least one checkbox</div>
+    <div id="snackbar-thanks">Thanks for submitting!</div>
 
     <!-- Footer -->
       <footer class="page-footer font-small blue-grey lighten-5 mt-4">
@@ -114,22 +114,31 @@
       <script type="text/javascript" src="../js/bootstrap.min.js"></script>
       <!-- MDB core JavaScript -->
       <script type="text/javascript" src="../js/mdb.min.js"></script>
+
       <script>
+      //ensures one checkbox is selected and displays snackbar if not
       $(document).ready(function(){
-      $('.thanks-reveal').click(function(){
-          $('.thanks-div').fadeIn('slow');
-        });
-      });
-      </script>
-      <script>
-      $(document).ready(function(){
-      $('#submit-b').click(function(){
-          $('.thanks-div').hide();
-          $('.submitted-div').fadeIn('slow');
-          $('#submit-b').hide();
+        $("form").submit(function(){
+        if ($('input:checkbox').filter(':checked').length < 1){
+            snackBar();
+        return false;
+      } else if ($('input:checkbox').filter(':checked').length >= 1) {
+          snackBarThanks();
           $('.thanks-reveal').prop('disabled', true);
+          $('#submit-b').hide();
+          $('.pagination-text-one').hide();
+      }
         });
       });
+      function snackBar() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+      }
+      function snackBarThanks() {
+        var x = document.getElementById("snackbar-thanks");
+        x.className = "show";
+      }
       </script>
 </body>
 
