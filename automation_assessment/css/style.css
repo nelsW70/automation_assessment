@@ -40,7 +40,6 @@ body{
     padding-bottom: 5rem;
 }
 
-
 /* background image masks */
 
 .rgba-black-strong {
@@ -482,15 +481,21 @@ footer.page-footer .footer-copyright {
     }
 }
 
-@media screen and (min-width: 667px) {
-    .report-main-content {
-      max-width: 75%;
-    }
-}
-
 @media screen and (max-width: 768px) and (orientation: portrait ){
     .navbar-brand img {
         height: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .opening-content {
+      padding-right: 7rem;
+    }
+}
+
+@media screen and (min-width: 667px) {
+    .report-main-content {
+      max-width: 75%;
     }
 }
 
