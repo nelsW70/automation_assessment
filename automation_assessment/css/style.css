@@ -77,6 +77,14 @@ header {
   font-size: 1.5rem;
 }
 
+/* report header text */
+
+.header-title-report {
+  font-family: 'Roboto Slab';
+  color: rgba(82, 144, 195, 1);
+  font-size: 1.5rem;
+}
+
 /* main content text */
 
 .opening-blurb-text {
@@ -105,9 +113,18 @@ header {
 }
 
 .report-answer {
+  color: rgba(82, 144, 195, 1);
   font-family: 'Open Sans';
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.question-content .report-header, .question-content .report-answer, .report-content {
+  font-size: 1.1rem;
+}
+
+.report-question {
+  opacity: .65;
 }
 
 /* hr line color */
@@ -119,17 +136,17 @@ hr {
 /* report div outline colors */
 
 .red-answer {
-  background-color: rgba(236, 52, 37, .5);
+  background-color: #FFCC80;
   border-radius: 10px;
 }
 
 .yellow-answer {
-  background-color: rgba(255, 254, 85, .5);
+  background-color: #FFF59D;
   border-radius: 10px;
 }
 
 .green-answer {
-  background-color: rgba(54, 125, 35, .5);
+  background-color: #C5E1A5;
   border-radius: 10px;
 }
 
@@ -489,13 +506,16 @@ footer.page-footer .footer-copyright {
 
 @media screen and (min-width: 768px) {
     .opening-content {
-      padding-right: 7rem;
+      padding-right: 5rem;
     }
 }
 
 @media screen and (min-width: 667px) {
     .report-main-content {
       max-width: 75%;
+    }
+    .report-page .report-main-content {
+      max-width: 85%;
     }
 }
 
