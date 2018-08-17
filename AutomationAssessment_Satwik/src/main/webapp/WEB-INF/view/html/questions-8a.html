@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Automation Assessment 8a</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto Slab" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet" />
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-two">
+
+  <header>
+    <div class="container-fluid header-info">
+          <div class="d-flex flex-row">
+            <div class="col-sm-2 col-md-2 logo-column mr-4">
+              <div class="pl-4 logo-section">
+                <a class="navbar-brand py-4" href="../index.html">
+                    <img src="../img/svg/sdlc_2blue_Logo.svg" height="54" alt="SDLC logo" />
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 header-main-text d-flex align-items-center pt-2">
+              <h3 class="header-title text-nowrap pt-3">Automation Assessment</h3>
+            </div>
+          </div>
+        </div>
+  </header>
+
+    <!-- main content -->
+    <section class="container-fluid mask rgba-white-strong question-content">
+      <div class="main-content">
+        <div class="overlay-one">
+          <div class="row d-flex ml-4 text-questions-content-white-background animated fadeIn pl-1">
+            <div class="col-sm-10 offset-sm-2 col-md-10 offset-md-2 col-lg-10 offset-lg-2 opening-content">
+              <h3 class="question-header">
+                What is the current percentage of production defects, detected by automation scripts?
+              </h3>
+                <form method="post" th:object="${totalInformation}"  th:action="@{/questions-9a}">
+                  <div class="pt-3 checkbox-label-text">
+                    <div class="form-check pl-0">
+                        <input type="checkbox" class="filled-in form-check-input thanks-reveal" th:checked="${totalInformation.questions[7].option1}" name="checkbox800a" id="checkbox800a" />
+                        <label class="form-check-label" for="checkbox800a">Less than 25%</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input thanks-reveal" th:checked="${totalInformation.questions[7].option2}" name="checkbox801a" id="checkbox801a" />
+                        <label class="form-check-label" for="checkbox801a">25% to 50%</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3 ">
+                        <input type="checkbox" class="filled-in form-check-input thanks-reveal" th:checked="${totalInformation.questions[7].option3}" name="checkbox802a" id="checkbox802a" />
+                        <label class="form-check-label" for="checkbox802a">50% to 75%</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" class="filled-in form-check-input thanks-reveal" th:checked="${totalInformation.questions[7].option4}" name="checkbox803a" id="checkbox803a" />
+                        <label class="form-check-label" for="checkbox803a">More than 75%</label>
+                    </div>
+                  </div>
+               <div class="pt-4">
+                    <a href="questions-9a.html"><button type="submit" name="submit" value="Submit" class="btn btn-primary btn-rounded">Next Question</button></a>
+                  </div>
+                </form>
+                <div class="d-lg-none pt-4">
+                <p class="pagination-text-one">
+                  Q8 of 10<span class="pagination-text-two pl-4"><a href="questions-7a.html">&#8592; Prev </a>|<a href="questions-9a.html"> Next &#8594;</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-10 offset-sm-2 col-md-10 offset-md-2 col-lg-12 text-center pagination-column pt-4 d-lg-none d-none d-lg-block">
+              <p class="pagination-text-one pt-3">
+                Q8 of 10<span class="pagination-text-two pl-4"><a href="/questions-7a">&#8592; Prev </a>|<a href="/questions-9a"> Next &#8594;</a></span>
+              </p>
+            </div>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- snackbar error message -->
+    <div id="snackbar">Please select at least one checkbox</div>
+
+    <!-- Footer -->
+      <footer class="page-footer font-small blue-grey lighten-5 mt-4">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-left py-3 pl-5">
+          <div class="copyright-div pl-3">
+            © 2018 SDLC Partners, L.P.
+          </div>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+      <!-- /Footer -->
+
+      <!-- SCRIPTS -->
+      <!-- JQuery -->
+      <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+      <!-- Bootstrap tooltips -->
+      <script type="text/javascript" src="../js/popper.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+      <!-- MDB core JavaScript -->
+      <script type="text/javascript" src="../js/mdb.min.js"></script>
+      <script type="text/javascript" src="../js/questionscripting/question_8a.js"></script>
+      
+     </body>
+
+</html>

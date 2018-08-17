@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Automation Assessment 1a</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto Slab" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet" />
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-two">
+
+  <header>
+    <div class="container-fluid header-info">
+          <div class="d-flex flex-row">
+            <div class="col-sm-2 col-md-2 logo-column mr-4">
+              <div class="pl-4 logo-section">
+                <a class="navbar-brand py-4" href="../index.html">
+                    <img src="../img/svg/sdlc_2blue_Logo.svg" height="54" alt="SDLC logo" />
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 header-main-text d-flex align-items-center pt-2">
+              <h3 class="header-title text-nowrap pt-3">Automation Assessment</h3>
+            </div>
+          </div>
+        </div>
+  </header>
+
+    <!-- main content -->
+    <section class="container-fluid mask rgba-white-strong">
+      <div class="main-content">
+        <div class="overlay-one">
+          <div class="row d-flex ml-4 text-questions-content-white-background animated fadeIn pl-1">
+            <div class="col-sm-10 offset-sm-2 col-md-10 offset-md-2 col-lg-10 offset-lg-2 opening-content">
+              <h3 class="question-header">
+                What automation tools do you currently use?
+              </h3>
+                <form method="post"  th:object="${totalInformation}"  th:action="@{/questions-2a}">
+                  <div class="pt-3 checkbox-label-text question-content">
+                    <div class="form-check pl-0">
+                        <input type="checkbox" name="checkbox100a" th:checked="${totalInformation.questions[0].option1}"  class="filled-in form-check-input" id="checkbox100a" />
+                        <label class="form-check-label" for="checkbox100a">HP - QTP, UFT, LeannFT</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" name="checkbox101a" th:checked="${totalInformation.questions[0].option2}" class="filled-in form-check-input" id="checkbox101a" />
+                        <label class="form-check-label" for="checkbox101a">IBM - RFT</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3 ">
+                        <input type="checkbox"  name="checkbox102a" th:checked="${totalInformation.questions[0].option3}" class="filled-in form-check-input" id="checkbox102a" />
+                        <label class="form-check-label" for="checkbox102a">Selenium</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" name="checkbox103a" th:checked="${totalInformation.questions[0].option4}" class="filled-in form-check-input" id="checkbox103a" />
+                        <label class="form-check-label" for="checkbox103a">Microsoft - Coded UI</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" name="checkbox104a" th:checked="${totalInformation.questions[0].option5}" class="filled-in form-check-input" id="checkbox104a" />
+                        <label class="form-check-label" for="checkbox104a">Performance Testing Tool</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" name="checkbox105a" th:checked="${totalInformation.questions[0].option6}" class="filled-in form-check-input" id="checkbox105a" />
+                        <label class="form-check-label" for="checkbox105a">Other - Paid</label>
+                    </div>
+                    <div class="md-form answer-divs p1a-other-a">
+                        <input type="text" name="form1aa"  id="form1aa"  th:field="${totalInformation.questions[0].other1}"  class="form-control" />
+                        <label for="form1aa">Please specify</label>
+                    </div>
+                    <div class="form-check pl-0 pt-3">
+                        <input type="checkbox" name="checkbox106a" th:checked="${totalInformation.questions[0].option7}" class="filled-in form-check-input" id="checkbox106a" />
+                        <label class="form-check-label" for="checkbox106a">Other - Open Source</label>
+                    </div>
+                    <div class="md-form answer-divs p1a-other-b">
+                        <input type="text" name ="form1ab"  th:field="${totalInformation.questions[0].other2}"  id="form1ab" class="form-control" />
+                        <label for="form1ab">Please specify</label>
+                    </div>
+                  </div>
+                  <div class="pt-4">
+                    <button type="submit" name="submit" value="Submit" class="btn btn-primary btn-rounded">Next Question</button>
+                  </div>
+                </form>
+              <div class="d-lg-none pt-4">
+                <p class="pagination-text-one">
+                  Q1 of 10<span class="pagination-text-two pl-4"><a href="questions.html">&#8592; Prev </a>|<a href="/questions-1a"> Next &#8594;</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-10 offset-sm-2 col-md-10 offset-md-2 col-lg-12 text-center pagination-column pt-4 d-lg-none d-none d-lg-block">
+              <p class="pagination-text-one pt-3">
+                Q1 of 10<span class="pagination-text-two pl-4"><a href="/questions">&#8592; Prev </a>|<a href="/questions-2a"> Next &#8594;</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="snackbar">Please select at least one checkbox</div>
+
+    <!-- Footer -->
+      <footer class="page-footer font-small blue-grey lighten-5 mt-4">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-left py-3 pl-5">
+          <div class="copyright-div pl-3">
+            © 2018 SDLC Partners, L.P.
+          </div>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+      <!-- /Footer -->
+
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+	<script type="text/javascript" src="../js/questionscripting/question_1a.js"></script>
+    <script>
+    //toggles visibility on the "other" input fields
+    
+    if(document.getElementById("checkbox105a").checked) {
+    	document.getElementById("form1aa").style.visibility = "visible";
+    	  $('.p1a-other-a').toggle('fast');
+    }
+    if(document.getElementById("checkbox106a").checked) {
+    	document.getElementById("form1ab").style.visibility = "visible";
+    	  $('.p1a-other-b').toggle('fast');
+    }
+    
+    item = document.getElementById(checkbox101a);
+    $(document).ready(function(){
+    $('#checkbox105a').click(function(){
+        $('.p1a-other-a').toggle('fast');
+      });
+    });
+    </script>
+    <script>
+    $(document).ready(function(){
+    $('#checkbox106a').click(function(){
+        $('.p1a-other-b').toggle('fast');
+      });
+    });
+    </script>
+    
+</body>
+
+</html>
