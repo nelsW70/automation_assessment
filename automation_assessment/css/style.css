@@ -150,6 +150,11 @@ hr {
   border-radius: 10px;
 }
 
+.blue-answer {
+  background-color: rgba(128, 161, 182, .3);
+  border-radius: 10px;
+}
+
 /* checkbox label text */
 
 .checkbox-label-text .form-check-label {
